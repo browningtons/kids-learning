@@ -1,324 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Innovators - Geoffrey Canada</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: #e0e0e0;
-            min-height: 100vh;
-        }
-
-        header {
-            background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460);
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 3px solid #00d4ff;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #00d4ff;
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-            margin-bottom: 0.5rem;
-        }
-
-        header p.subtitle {
-            font-size: 1.2rem;
-            color: #a0c4ff;
-        }
-
-        header p.byline {
-            font-size: 0.95rem;
-            color: #7b8fa8;
-            margin-top: 0.5rem;
-        }
-
-        nav {
-            background: #1a1a2e;
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #333;
-        }
-
-        nav a {
-            color: #00d4ff;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        main {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            margin-bottom: 2rem;
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            color: #00d4ff;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: #c0c0c0;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        section {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        section h2 {
-            font-size: 1.6rem;
-            color: #00d4ff;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
-        }
-
-        section p, section li {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #c0c0c0;
-        }
-
-        section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        section ul li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        section ul li::before {
-            content: "\25B8";
-            color: #00d4ff;
-            position: absolute;
-            left: 0;
-        }
-
-        .quote-block {
-            background: rgba(0, 212, 255, 0.08);
-            border-left: 4px solid #00d4ff;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: #a0c4ff;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.07);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(0, 212, 255, 0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
-        }
-
-        .card h3 {
-            color: #00d4ff;
-            margin-bottom: 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        .card p {
-            color: #b0b0b0;
-            line-height: 1.6;
-        }
-
-        .placeholder-section {
-            text-align: center;
-            padding: 3rem;
-            border: 2px dashed rgba(0, 212, 255, 0.3);
-            border-radius: 12px;
-            margin-bottom: 2rem;
-        }
-
-        .placeholder-section h2 {
-            border-bottom: none;
-            margin-bottom: 0.5rem;
-        }
-
-        .placeholder-section p {
-            color: #7b8fa8;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #555;
-            border-top: 1px solid #333;
-            margin-top: 3rem;
-        }
-
-        footer span {
-            color: #00d4ff;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-
-            nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Innovators — A class project about Geoffrey Canada and AI in education." />
+  <title>AI Innovators — Geoffrey Canada</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">&#x1F393;</span>
+        <span class="brand-name">AI Innovators</span>
+      </div>
 
-<header>
-    <h1>AI Innovators</h1>
-    <p class="subtitle">How AI Can Help Kids Learn</p>
-    <p class="byline">By Easton</p>
-</header>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#origins">Where He Started</a>
+        <a href="#foundation">His Foundation</a>
+        <a href="#hcz">The Big Idea</a>
+        <a href="#results">Results</a>
+        <a href="#legacy">Why He Matters</a>
+      </nav>
+    </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#who">Geoffrey Canada</a>
-    <a href="#vision">His Vision</a>
-    <a href="#impact">Impact</a>
-    <a href="#more">More Coming Soon</a>
-</nav>
+    <main>
+      <!-- ===== HERO ===== -->
+      <div class="hero">
+        <div class="card hero-main">
+          <p class="eyebrow">How AI Can Help Kids Learn</p>
+          <h1>Geoffrey Canada</h1>
+          <p class="subtitle">
+            He grew up in one of the toughest neighborhoods in America. Then he built
+            a system that proved every kid can succeed — if someone builds the support
+            to make it possible.
+          </p>
+          <div class="byline">A class project by Easton</div>
+        </div>
 
-<main>
+        <aside class="card hero-side portrait-card">
+          <!--
+            IMAGE: Add a photo of Geoffrey Canada here.
+            Save the image as "geoffrey-canada.jpg" in this folder, then uncomment:
+          -->
+          <div class="portrait-placeholder">
+            <div class="portrait-icon" aria-hidden="true">&#x1F464;</div>
+            <p class="portrait-caption">Photo of Geoffrey Canada</p>
+            <p class="portrait-hint">Add geoffrey-canada.jpg to this folder</p>
+          </div>
+          <!-- <img src="geoffrey-canada.jpg" alt="Portrait of Geoffrey Canada" class="portrait-img" /> -->
+          <div class="portrait-info">
+            <p class="portrait-name">Geoffrey Canada</p>
+            <p class="portrait-title">Educator, Activist &amp; Founder of the Harlem Children's Zone</p>
+            <p class="portrait-born">Born January 13, 1952 · South Bronx, New York</p>
+          </div>
+        </aside>
+      </div>
 
-    <div class="hero">
-        <h2>Meet Geoffrey Canada</h2>
-        <p>
-            A leader in education who believes every kid deserves a chance to succeed.
-            Geoffrey Canada has spent his life working to change how children learn,
-            and now AI is becoming a powerful new tool in that mission.
-        </p>
-    </div>
+      <!-- ===== SECTION 1: WHERE HE STARTED ===== -->
+      <section id="origins">
+        <div class="section-header">
+          <h2>Where He Started</h2>
+        </div>
 
-    <section id="about">
-        <h2>About This Project</h2>
-        <p>
-            This project explores how people are using artificial intelligence to help
-            kids learn better in school. We're looking at leaders like Geoffrey Canada
-            who are pushing for innovation in education and how AI tools can support
-            students, teachers, and communities.
-        </p>
-    </section>
+        <div class="card content-card">
+          <div class="content-body">
+            <p>
+              Geoffrey Canada grew up in one of the toughest neighborhoods in America — the South Bronx
+              in the 1950s and 60s. His family lived on welfare, his father was mostly absent, and the streets
+              around him were filled with crime and abandoned buildings. By age 12, he carried a knife
+              just to feel safe.
+            </p>
+            <p>
+              But his mother refused to let poverty define her sons. She filled their home with books,
+              pushed them to study, and eventually sent Geoffrey to live with his grandparents on Long Island
+              to escape the violence. That decision changed his life.
+            </p>
+          </div>
+        </div>
 
-    <section id="who">
-        <h2>Who Is Geoffrey Canada?</h2>
-        <p>
-            Geoffrey Canada is an educator, activist, and the founder of the
-            Harlem Children's Zone &mdash; a groundbreaking program that provides
-            support for children and families in a 97-block area of Harlem, New York.
-            His work has shown that with the right resources, every child can thrive.
-        </p>
         <div class="quote-block">
+          <p class="quote-text">
             "There is no excuse for not giving every child in America a quality education."
-            &mdash; Geoffrey Canada
+          </p>
+          <p class="quote-attr">&mdash; Geoffrey Canada</p>
         </div>
-    </section>
+      </section>
 
-    <section id="vision">
-        <h2>His Vision for Education &amp; AI</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Equal Access</h3>
-                <p>
-                    Geoffrey Canada believes technology like AI can level the playing
-                    field, giving every student access to personalized learning tools
-                    no matter where they live.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Personalized Learning</h3>
-                <p>
-                    AI tutors can adapt to each student's pace, helping kids who need
-                    extra time while challenging those who are ready to move ahead.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Community Support</h3>
-                <p>
-                    The Harlem Children's Zone model wraps support around the whole
-                    child &mdash; AI tools can extend that support into the classroom
-                    and home.
-                </p>
-            </div>
+      <!-- ===== SECTION 2: BUILDING HIS FOUNDATION ===== -->
+      <section id="foundation">
+        <div class="section-header">
+          <h2>Building His Foundation</h2>
         </div>
-    </section>
 
-    <section id="impact">
-        <h2>Impact &amp; Key Facts</h2>
-        <ul>
-            <li>The Harlem Children's Zone serves over 27,000 children and families</li>
-            <li>Geoffrey Canada's model has been replicated in cities across America</li>
-            <li>He was named one of Time Magazine's 100 Most Influential People</li>
-            <li>The program focuses on education from birth through college</li>
-            <li>AI tools are now being explored to enhance tutoring and mentorship programs</li>
-        </ul>
-    </section>
+        <div class="grid-3">
+          <div class="card tile">
+            <div class="tile-header">
+              <span class="step-num">1974</span>
+              <svg class="tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"></path>
+              </svg>
+            </div>
+            <h3>Bowdoin College</h3>
+            <p>
+              Earned a scholarship and graduated with a degree in psychology and sociology,
+              studying the systems that shape how people grow up.
+            </p>
+          </div>
 
-    <div class="placeholder-section" id="more">
-        <h2>More Content Coming Soon</h2>
-        <p>Additional research, images, and details about Geoffrey Canada and AI in education will be added here.</p>
-    </div>
+          <div class="card tile">
+            <div class="tile-header">
+              <span class="step-num">1975</span>
+              <svg class="tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3>Harvard Education</h3>
+            <p>
+              Completed a master's in education at Harvard, learning the theory behind
+              how to build better schools and stronger communities.
+            </p>
+          </div>
 
-</main>
+          <div class="card tile">
+            <div class="tile-header">
+              <span class="step-num">1983</span>
+              <svg class="tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3>Back to New York</h3>
+            <p>
+              Returned to New York running programs for troubled youth — teaching conflict
+              resolution and martial arts to help kids build discipline. He was determined
+              to fix the systems that had nearly swallowed him as a child.
+            </p>
+          </div>
+        </div>
+      </section>
 
-<footer>
-    <p><span>AI Innovators</span> &mdash; A class project by Easton</p>
-</footer>
+      <!-- ===== SECTION 3: THE BIG IDEA ===== -->
+      <section id="hcz">
+        <div class="section-header">
+          <h2>The Big Idea — Harlem Children's Zone</h2>
+        </div>
 
+        <div class="card content-card highlight-card">
+          <div class="content-body">
+            <p>
+              Most programs helped kids one at a time. Canada thought bigger.
+            </p>
+            <p>
+              In 1997, he launched the <strong>Harlem Children's Zone (HCZ)</strong>, starting with
+              24 blocks and eventually covering nearly 100 blocks of Central Harlem. His idea was radical:
+              <strong>surround an entire neighborhood with free support from birth through college.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="card split-card programs-card">
+          <div>
+            <h3>The Pipeline</h3>
+            <p class="list-intro">HCZ created a connected system of free programs:</p>
+            <ul class="list-check">
+              <li><strong>Baby College</strong> — parenting classes for new moms and dads</li>
+              <li><strong>Free preschool</strong> — giving kids a head start before kindergarten</li>
+              <li><strong>Promise Academy</strong> — charter schools with longer days and rigorous academics</li>
+              <li><strong>Health services</strong> — including asthma management and nutrition support</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What Made It Different</h3>
+            <ul class="list-check">
+              <li>After-school programs and community centers</li>
+              <li>College counselors guiding students to graduation</li>
+              <li>Everything connected — not separate programs, one system</li>
+              <li>Everything free — available to every family in the zone</li>
+            </ul>
+            <div class="callout">
+              <p>
+                Instead of fixing one kid at a time, Canada wrapped an entire community
+                in support — block by block.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 4: THE RESULTS ===== -->
+      <section id="results">
+        <div class="section-header">
+          <h2>The Results</h2>
+        </div>
+
+        <div class="card stats-card">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">97</span>
+              <span class="stat-label">City blocks covered by HCZ in Central Harlem</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">13,000+</span>
+              <span class="stat-label">Children and families served each year</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Birth–College</span>
+              <span class="stat-label">The full pipeline of support, cradle to career</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card content-card">
+          <div class="content-body">
+            <p>
+              HCZ's Promise Academy schools <strong>effectively closed the achievement gap in math</strong>
+              between Black and white students for enrolled kids. Thousands of Harlem youth went on to
+              college who might never have had the chance.
+            </p>
+            <p>
+              The model caught the attention of <strong>President Obama</strong>, whose administration created
+              the federal <strong>"Promise Neighborhoods"</strong> program to replicate Canada's approach
+              in cities across the country — awarding $430 million to 68 communities inspired by HCZ.
+            </p>
+          </div>
+        </div>
+
+        <div class="card fact-card">
+          <p class="list-title">Key Achievements</p>
+          <ul class="list-check">
+            <li>Promise Academy math gains exceeded one standard deviation — enough to close the achievement gap</li>
+            <li>Near-universal college enrollment among Promise Academy graduates</li>
+            <li>Model replicated through federal Promise Neighborhoods program across the country</li>
+            <li>Canada named one of Time Magazine's 100 Most Influential People</li>
+            <li>Named one of Fortune's 50 Greatest Leaders</li>
+            <li>Received the Heinz Award, McGraw Prize in Education, and Forbes Lifetime Achievement Award</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 5: WHY HE MATTERS ===== -->
+      <section id="legacy">
+        <div class="section-header">
+          <h2>Why He Matters</h2>
+        </div>
+
+        <div class="card content-card">
+          <div class="content-body">
+            <p>
+              Geoffrey Canada proved that <strong>where you grow up doesn't have to determine where
+              you end up</strong> — but only if someone builds the support systems to make that true.
+            </p>
+            <p>
+              He used data, relentless commitment, and a "whatever it takes" mindset to reimagine
+              what education could look like for kids in poverty. He stepped down as CEO of HCZ in 2014
+              but continues to advocate for children through the <strong>William Julius Wilson Institute</strong>
+              and public speaking.
+            </p>
+          </div>
+        </div>
+
+        <div class="card split-card">
+          <div>
+            <h3>His Books</h3>
+            <ul class="list-check">
+              <li><strong>Fist Stick Knife Gun</strong> (1995) — His memoir about growing up in the South Bronx, showing how violence is learned and can be unlearned</li>
+              <li><strong>Reaching Up for Manhood</strong> (1998) — About the barriers boys face growing up and how mentorship can change their path</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Still Going</h3>
+            <p>
+              Canada continues to speak at conferences and advise organizations. In 2024, he spoke
+              at SXSW EDU about place-based learning. In 2025, he received the Forbes 400 Lifetime
+              Achievement Award for Social Entrepreneurship. He serves as a special advisor to
+              Blue Meridian Partners and remains president of HCZ.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== KEY TAKEAWAY ===== -->
+      <section id="takeaway">
+        <div class="section-header">
+          <h2>Key Takeaway</h2>
+        </div>
+
+        <div class="card takeaway-card">
+          <p class="takeaway-text">
+            Canada didn't invent a device or write code. He invented a <strong>system</strong> —
+            a way of wrapping an entire community in support so that every kid has a real shot.
+            That's innovation too.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          &copy; <span id="year"></span> AI Innovators &middot;
+          <span style="opacity:.75;">A class project by Easton</span>
+        </div>
+        <div class="navlinks">
+          <a href="#origins">Where He Started</a>
+          <a href="#hcz">The Big Idea</a>
+          <a href="#legacy">Why He Matters</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
